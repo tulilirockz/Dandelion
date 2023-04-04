@@ -1,5 +1,21 @@
 # Changelog
 
+## 1.0.0 (2023-04-04)
+
+
+### ⚠ BREAKING CHANGES
+
+* set my personal packages
+
+### Bug Fixes
+
+* COSIGN_PASSWORD for signing ([e1c08b7](https://github.com/tulilirockz/mybox/commit/e1c08b7c4eebe429f1b32cf74c8639565de2f186))
+
+
+### Miscellaneous Chores
+
+* set my personal packages ([99d8a5d](https://github.com/tulilirockz/mybox/commit/99d8a5d7f650cb8e07bc2971c1745d0ba5d5bb07))
+
 ## 1.0.0 (2023-02-04)
 
 
