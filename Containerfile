@@ -15,7 +15,13 @@ RUN apk update && \
 
 RUN rm /extra-packages
 
-RUN chsh -s /bin/fish
+SHELL ["fish", "--command"]
+
+RUN chsh -s /usr/bin/fish
+
+ENV SHELL /usr/bin/fish
+
+ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
 
 RUN   ln -fs /bin/sh /usr/bin/sh && \
       ln -fs /usr/bin/distrobox-host-exec /usr/local/bin/docker && \
