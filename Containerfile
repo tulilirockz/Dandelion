@@ -17,8 +17,6 @@ RUN rm /extra-packages
 
 SHELL ["fish", "--command"]
 
-RUN chsh -s /usr/bin/fish
-
 ENV SHELL /usr/bin/fish
 
 ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
