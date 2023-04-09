@@ -8,12 +8,10 @@ just
 neovim
 ripgrep
 starship
-vimdiff
 wl-clipboard
-zellij 
+zellij
+fish
 lm-sensors
-age
-just
 stow
 rsync
 mprocs
