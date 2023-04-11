@@ -1,5 +1,4 @@
 if status is-interactive
-	atuin init fish | source
 	alias ls "exa"
 	alias vi "nvim"
 	alias grep "rg"
