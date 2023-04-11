@@ -18,3 +18,5 @@ mprocs
 github-cli
 dust
 jq
+rtx
+cargo
