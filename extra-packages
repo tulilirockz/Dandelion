@@ -16,3 +16,5 @@ stow
 rsync
 mprocs
 github-cli
+dust
+jq
