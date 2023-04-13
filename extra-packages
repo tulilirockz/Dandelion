@@ -18,5 +18,9 @@ mprocs
 github-cli
 dust
 jq
+yq
+fzf
+btop
 rtx
 cargo
+syncthing
