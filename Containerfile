@@ -9,6 +9,8 @@ COPY etc /etc
 
 COPY extra-packages /
 
+RUN curl -sS https://starship.rs/install.sh | sh && sh -c "$(wget -qO- get.chezmoi.io)"
+
 RUN dnf update -y && \
     grep -v '^#' /extra-packages | xargs dnf install -y
 
