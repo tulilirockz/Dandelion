@@ -1,4 +1,4 @@
-FROM registry.fedoraproject.org/fedora-toolbox:latest
+FROM quay.io/toolbx-images/almalinux-toolbox:latest
 
 LABEL com.github.containers.toolbox="true" \
       usage="This image is meant to be used with the toolbox or distrobox command" \
@@ -9,14 +9,15 @@ COPY etc /etc
 
 COPY extra-packages /
 
-RUN curl -sS https://starship.rs/install.sh | sh && sh -c "$(wget -qO- get.chezmoi.io)"
+RUN curl --proto '=https' --tlsv1.2 -sSf -L https://nixos.org/nix/install | sh -s -- --daemon
 
-RUN dnf update -y && \
-    grep -v '^#' /extra-packages | xargs dnf install -y
+RUN source /nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh && nix profile --extra-experimental-features nix-command --extra-experimental-features flakes install github:ublue-os/fleek/main
+
+#RUN dnf update -y && \
+#    grep -v '^#' /extra-packages | xargs dnf install -y
 
 RUN rm /extra-packages
 
-SHELL ["fish", "--command"]
 
 ENV SHELL /usr/bin/fish
 
