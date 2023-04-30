@@ -8,5 +8,4 @@ if status is-interactive
 	alias container-just "just -f /etc/justfile"
 
 	starship init fish | source
-	atuin init fish | source
 end
