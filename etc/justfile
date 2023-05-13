@@ -1,5 +1,6 @@
 setup-fish:
-  chsh -s /usr/bin/fish
+  sed -i -e '/^'"$USER"'/s/\/bin\/bash/\/usr\/bin\/fish/' /etc/passwd
+  
 
 setup-fisher:
   fish --command 'curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher'
