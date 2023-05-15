@@ -1,5 +1,5 @@
 setup-fish:
-  sed -i -e '/^'"$USER"'/s/\/bin\/bash/\/usr\/bin\/fish/' /etc/passwd
+  sed -i -e '/^'"$USER"'/s/\/bin\/bash/\/usr\/bin\/nu/' /etc/passwd
   
 
 setup-fisher:

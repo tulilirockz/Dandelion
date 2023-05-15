@@ -8,7 +8,9 @@ LABEL com.github.containers.toolbox="true" \
 COPY etc /etc
 
 COPY extra-packages /
-RUN zypper update -y && \
+RUN zypper -n addrepo https://download.opensuse.org/repositories/shells/openSUSE_Factory/shells.repo shells | echo "a" && \
+    zypper -n refresh && \
+    zypper -n update -y && \
     grep -v '^#' /extra-packages | xargs zypper install -y && \
-    zypper clean
+    zypper -n clean
 RUN rm /extra-packages
