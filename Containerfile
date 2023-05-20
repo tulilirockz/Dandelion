@@ -12,7 +12,7 @@ COPY extra-packages /
 RUN rpm --import 'https://packages.microsoft.com/keys/microsoft.asc' && \
     wget -O '/etc/zypp/repos.d/microsoft-prod.repo' 'https://packages.microsoft.com/config/opensuse/15/prod.repo' && \
     chown root:root '/etc/zypp/repos.d/microsoft-prod.repo' && \
-    echo 'a ' | zypper --quiet addrepo --refresh -p 90 'https://packages.microsoft.com/yumrepos/vscode' && \
+    echo 'a' | zypper --quiet addrepo --refresh -p 90 'https://packages.microsoft.com/yumrepos/vscode' && \
     echo 'a' | zypper --quiet addrepo --refresh -p 90 'https://download.opensuse.org/repositories/shells/openSUSE_Factory/shells.repo' && \
     zypper -n --gpg-auto-import-keys refresh
 
