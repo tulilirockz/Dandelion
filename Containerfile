@@ -12,11 +12,11 @@ COPY extra-packages /
 RUN rpm --import 'https://packages.microsoft.com/keys/microsoft.asc' && \
     wget -O '/etc/zypp/repos.d/microsoft-prod.repo' 'https://packages.microsoft.com/config/opensuse/15/prod.repo' && \
     chown root:root '/etc/zypp/repos.d/microsoft-prod.repo' && \
-    zypper ar 'https://packages.microsoft.com/yumrepos/vscode' && \
+    zypper ar 'https://packages.microsoft.com/yumrepos/vscode' vscode && \
     echo 'a' | zypper ar 'https://download.opensuse.org/repositories/shells/openSUSE_Factory/shells.repo' && \
     zypper -n --gpg-auto-import-keys refresh
 
-RUN zypper -n update -y && \
+RUN zypper -n dup -y && \
     zypper -n install -y $(grep -v '^#' /extra-packages | xargs) && \
     zypper -n clean && \
     rm /extra-packages
