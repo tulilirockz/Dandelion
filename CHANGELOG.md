@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.0](https://github.com/tulilirockz/Dandelion/compare/v3.0.0...v3.1.0) (2023-06-12)
+
+
+### Features
+
+* change scope to management for turquoise images ([bc03978](https://github.com/tulilirockz/Dandelion/commit/bc03978afb266e67660cc80541d8857d3d591563))
+
 ## [3.0.0](https://github.com/tulilirockz/Dandelion/compare/v2.0.0...v3.0.0) (2023-05-26)
 
 
